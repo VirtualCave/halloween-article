@@ -1,0 +1,59 @@
+...@estilo
+
+titulo: "La sesión de los 165 millones de tokens" {class: titulo}
+
+caso: {
+  class: invisible
+  label: ""
+  grid-rows: 3
+  grid-gap: 28
+
+  cuenta: {
+    class: invisible
+    label: ""
+    grid-columns: 5
+    grid-gap: 12
+    llamadas: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "461" {class: numero; width: 290; height: 64}
+      t: "llamadas del hilo principal" {class: pie; width: 290; height: 40}
+    }
+    por: "×" {class: etiqueta; style.font-size: 40; width: 50; height: 104}
+    contexto: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "357.000" {class: numero; width: 290; height: 64}
+      t: "tokens de contexto por llamada" {class: pie; width: 290; height: 40}
+    }
+    igual: "=" {class: etiqueta; style.font-size: 40; width: 50; height: 104}
+    total: {
+      class: sangre
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "≈ 165 M" {class: numero; style.font-color: "#FFD6DC"; width: 290; height: 64}
+      t: "tokens de contexto releídos" {class: pie; style.font-color: "#FFD6DC"; width: 290; height: 40}
+    }
+  }
+
+  barra: {
+    class: invisible
+    label: ""
+    grid-columns: 2
+    grid-gap: 4
+    lecturas: "Lecturas de caché: 82 %" {class: sangre; width: 820; height: 64}
+    resto: "Resto: 18 %" {class: niebla; width: 180; height: 64}
+  }
+
+  pie: "Reparto de los tokens ponderados del hilo principal" {class: pie; width: 1004; height: 30}
+}
+
+leyenda: |md
+  Una sesión de la skill **tech-tutorial** que revisó una docena de tutoriales Java.
+  **El texto de la skill era ruido al lado de esto.**
+| {class: nota; near: bottom-center}

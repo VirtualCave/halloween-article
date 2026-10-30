@@ -1,0 +1,5 @@
+{
+  "name": "SKILL",
+  "description": "SKILL skill plus its subagents (fixed model, minimal tools, fixed prompt).",
+  "author": { "name": "AUTHOR" }
+}

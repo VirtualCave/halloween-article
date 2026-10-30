@@ -1,0 +1,24 @@
+...@estilo
+
+direction: down
+
+titulo: "¿Quién hace cada trabajo?" {class: titulo}
+
+q1: "¿Es\ndeterminista?" {shape: diamond; class: calabaza; width: 220; height: 130}
+script: "Un script\nno gasta tokens de modelo:\nsolo cuesta lo que imprime" {class: ecto; width: 340; height: 104}
+q2: "¿Mecánico y lo\nverifica un script?" {shape: diamond; class: calabaza; width: 260; height: 150}
+haiku: "Subagente haiku · effort low\ntraducir textos, ejecutar\npasos ya definidos" {class: caja; width: 340; height: 104}
+q3: "¿Criterio que luego\ncomprueba un script,\nun build o una fuente?" {shape: diamond; class: calabaza; width: 300; height: 170}
+sonnet: "Subagente sonnet · effort medium\nredactar datos de prueba,\ncontrastar con la documentación" {class: caja; width: 400; height: 104}
+principal: "Modelo principal, con todo el contexto\nescribir, diseñar, nombrar, diagnosticar,\nrevisar a los subagentes e informar" {class: magenta; width: 480; height: 104}
+
+q1 -> script: "sí" {class: flecha}
+q1 -> q2: "no" {class: flecha}
+q2 -> haiku: "sí" {class: flecha}
+q2 -> q3: "no" {class: flecha}
+q3 -> sonnet: "sí" {class: flecha}
+q3 -> principal: "no: decide la calidad" {class: flecha}
+
+leyenda: |md
+  Con pocos ficheros o pasos, lo hace el principal: **arrancar un subagente cuesta decenas de miles de tokens** (casi todos de caché).
+| {class: nota; near: bottom-center}

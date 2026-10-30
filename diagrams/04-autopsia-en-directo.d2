@@ -1,0 +1,104 @@
+...@estilo
+
+titulo: "Autopsia en directo: la sesión que preparó este artículo" {class: titulo}
+
+datos: {
+  class: invisible
+  label: ""
+  grid-rows: 9
+  grid-gap: 10
+
+  resumen: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 14
+    a: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "26" {class: numero; width: 330; height: 60}
+      t: "llamadas del hilo principal" {class: pie; width: 330; height: 36}
+    }
+    b: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "163.100" {class: numero; width: 330; height: 60}
+      t: "tokens de contexto por llamada" {class: pie; width: 330; height: 36}
+    }
+    c: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "4,04 M" {class: numero; width: 330; height: 60}
+      t: "tokens leídos de caché" {class: pie; width: 330; height: 36}
+    }
+  }
+
+  cabecera: "Lo que más arrastró: tamaño del resultado × llamadas posteriores" {class: etiqueta; width: 1018; height: 50}
+
+  r1: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Leer el código de audit.py" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: sangre; width: 529; height: 44}
+    v: "6,3k × 21 = 132k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+  r2: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Página de docs: costes" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: calabaza; width: 466; height: 44}
+    v: "11,7k × 10 = 117k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+  r3: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Página de docs: caché" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: calabaza; width: 396; height: 44}
+    v: "11,0k × 9 = 99k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+  r4: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Leer el código de tokens.py" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: sangre; width: 395; height: 44}
+    v: "4,9k × 20 = 99k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+  r5: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Leer patterns.md" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: calabaza; width: 275; height: 44}
+    v: "3,0k × 23 = 69k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+  r6: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    n: "Página de docs: skills" {class: pie; label.near: center-right; width: 300; height: 44}
+    b: "" {class: calabaza; width: 169; height: 44}
+    v: "4,7k × 9 = 42k" {class: pie; label.near: center-left; width: 170; height: 44}
+  }
+}
+
+leyenda: |md
+  Datos reales de `tokens.py show` durante la investigación (Opus 5.5). **En rojo, el código de dos scripts leído entero.**
+
+  La propia skill pide lo contrario, ejecutar `--help` y leer solo lo que imprimen.
+| {class: nota; near: bottom-center}

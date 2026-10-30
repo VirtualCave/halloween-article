@@ -1,0 +1,22 @@
+...@estilo
+
+direction: down
+
+titulo: "El ritual de skill-optimizer" {class: titulo}
+
+p1: "1 · Snapshot y medición\naudit.py --save  ·  tokens.py list / show" {class: caja; width: 680; height: 84}
+p2: "2 · Leer la skill entera\nSKILL.md, references, agentes y el --help de cada script" {class: caja; width: 680; height: 84}
+p3: "3 · Plan con evidencia\ncambio · patrón · evidencia · ahorro · riesgo para la calidad" {class: caja; width: 680; height: 84}
+ok: "¿OK del\nusuario?" {shape: diamond; class: calabaza; width: 200; height: 130}
+audit: "Modo audit:\nel ritual acaba con el plan" {class: tumba; width: 260; height: 84}
+p4: "4 · Aplicar, del mayor ahorro al menor\nscripts, references y agentes; cada script, probado con un input real" {class: caja; width: 680; height: 84}
+p5: "5 · Medir otra vez\naudit.py --compare  ·  evals o tarea representativa  ·  tokens.py show" {class: caja; width: 680; height: 84}
+informe: "Informe antes / después por nivel\nlo medido, separado de lo estimado" {class: ecto; width: 680; height: 84}
+
+p1 -> p2: {class: flecha}
+p2 -> p3: {class: flecha}
+p3 -> ok: {class: flecha}
+ok -> p4: "sí" {class: flecha}
+ok -> audit: "modo audit" {class: flecha}
+p4 -> p5: {class: flecha}
+p5 -> informe: {class: flecha}

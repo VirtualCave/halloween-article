@@ -1,0 +1,76 @@
+...@estilo
+
+titulo: "Censo del cementerio: un portátil, 101 skills" {class: titulo}
+
+censo: {
+  class: invisible
+  label: ""
+  grid-rows: 2
+  grid-gap: 16
+
+  fila1: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 16
+    instaladas: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "101" {class: numero; width: 330; height: 70}
+      t: "skills instaladas\nen ~/.claude/skills" {class: pie; width: 330; height: 56}
+    }
+    listado: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "≈ 7.900" {class: numero; width: 330; height: 70}
+      t: "tokens de descripciones que\npiden sitio en cada sesión" {class: pie; width: 330; height: 56}
+    }
+    fantasmas: {
+      class: sangre
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "61 de 122" {class: numero; style.font-color: "#FFD6DC"; width: 330; height: 70}
+      t: "skills listadas solo con su nombre\n(skill-optimizer incluida)" {class: pie; style.font-color: "#FFD6DC"; width: 330; height: 56}
+    }
+  }
+
+  fila2: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 16
+    mediana: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "≈ 2.300" {class: numero; width: 330; height: 70}
+      t: "tokens en el SKILL.md mediano\n(el mayor: ≈ 16.100)" {class: pie; width: 330; height: 56}
+    }
+    scripts: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "81" {class: numero; width: 330; height: 70}
+      t: "sin un solo script:\ntodo lo hace el modelo a mano" {class: pie; width: 330; height: 56}
+    }
+    evals: {
+      class: tarjeta
+      label: ""
+      grid-rows: 2
+      grid-gap: 0
+      n: "100" {class: numero; width: 330; height: 70}
+      t: "sin evals: nadie puede medir\nsi un cambio las empeora" {class: pie; width: 330; height: 56}
+    }
+  }
+}
+
+leyenda: |md
+  Medido con `audit.py` (tokens ≈ caracteres / 4) y con el listado de skills de la sesión que preparó este artículo.
+| {class: nota; near: bottom-center}

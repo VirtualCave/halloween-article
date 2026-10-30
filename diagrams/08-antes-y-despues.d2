@@ -1,0 +1,45 @@
+...@estilo
+
+titulo: "De monolito a router" {class: titulo}
+
+comparativa: {
+  class: invisible
+  label: ""
+  grid-columns: 3
+  grid-gap: 24
+
+  antes: "ANTES · la skill monolito" {
+    class: grupo
+    grid-rows: 5
+    grid-gap: 14
+    skill: "SKILL.md de cientos de líneas:\nflujo, tablas de alcance, comandos,\nprompts de subagentes y checklist" {class: sangre; width: 400; height: 104}
+    modelo: "El modelo lo hace todo a mano:\nRead, Grep, Bash… y relee el\ncontexto entero en cada paso" {class: sangre; width: 400; height: 104}
+    sub: "Subagentes general-purpose:\nsin modelo fijo, con todas las\nherramientas y respuestas sin tope" {class: sangre; width: 400; height: 104}
+    reglas: "Reglas en mayúsculas (SIEMPRE, NUNCA)\nque las sesiones siguen saltándose" {class: sangre; width: 400; height: 84}
+    medida: "Sin evals ni medida:\nnadie sabe si un cambio empeora" {class: sangre; width: 400; height: 84}
+  }
+
+  paso: "skill-optimizer  →" {class: etiqueta; style.font-color: "#FF8A1F"; style.font-size: 22; width: 220; height: 60}
+
+  despues: "DESPUÉS · la skill router" {
+    class: grupo
+    grid-rows: 5
+    grid-gap: 14
+    skill: "SKILL.md router: qué es, scripts,\nalcances, reglas y una línea por paso" {class: ecto; width: 420; height: 84}
+    start: "start.py --scope …\nimprime los NEXT: qué leer, qué delegar" {class: caja; width: 420; height: 84}
+    medio: {
+      class: invisible
+      label: ""
+      grid-columns: 2
+      grid-gap: 12
+      refs: "references/\nsolo las del alcance" {class: caja; width: 204; height: 96}
+      agentes: "agents/\nhaiku o sonnet,\nrespuesta acotada" {class: caja; width: 204; height: 96}
+    }
+    check: "check.py: una línea por problema,\nel log completo a un fichero" {class: caja; width: 420; height: 84}
+    finish: "finish.py: FINISH OK\ny solo entonces «hecho»" {class: ecto; width: 420; height: 84}
+  }
+}
+
+leyenda: |md
+  Mismo resultado, menos llamadas y menos contexto: **lo determinista pasa a scripts; el criterio se queda en el modelo principal.**
+| {class: nota; near: bottom-center}

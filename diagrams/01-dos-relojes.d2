@@ -1,0 +1,76 @@
+...@estilo
+
+titulo: Dos relojes, un mismo contador {class: titulo}
+
+semana: {
+  class: invisible
+  label: ""
+  grid-rows: 4
+  grid-gap: 8
+
+  cabecera: {
+    class: invisible
+    label: ""
+    grid-columns: 8
+    grid-gap: 8
+    c0: " " {class: invisible; width: 200; height: 40}
+    c1: "Lun" {class: etiqueta; width: 112; height: 40}
+    c2: "Mar" {class: etiqueta; width: 112; height: 40}
+    c3: "Mié" {class: etiqueta; width: 112; height: 40}
+    c4: "Jue" {class: etiqueta; width: 112; height: 40}
+    c5: "Vie" {class: etiqueta; width: 112; height: 40}
+    c6: "Sáb" {class: etiqueta; width: 112; height: 40}
+    c7: "Dom" {class: etiqueta; width: 112; height: 40}
+  }
+
+  manana: {
+    class: invisible
+    label: ""
+    grid-columns: 8
+    grid-gap: 8
+    c0: "Ventana de 5 h\n(mañana)" {class: etiqueta; label.near: center-left; width: 200; height: 72}
+    c1: "45 %" {class: niebla; width: 112; height: 72}
+    c2: "100 %\nsesión" {class: sangre; width: 112; height: 72}
+    c3: "100 %\nsesión" {class: sangre; width: 112; height: 72}
+    c4: "bloqueado" {class: tumba; width: 112; height: 72}
+    c5: "bloqueado" {class: tumba; width: 112; height: 72}
+    c6: "bloqueado" {class: tumba; width: 112; height: 72}
+    c7: "bloqueado" {class: tumba; width: 112; height: 72}
+  }
+
+  tarde: {
+    class: invisible
+    label: ""
+    grid-columns: 8
+    grid-gap: 8
+    c0: "Ventana de 5 h\n(tarde)" {class: etiqueta; label.near: center-left; width: 200; height: 72}
+    c1: "70 %" {class: niebla; width: 112; height: 72}
+    c2: "85 %" {class: calabaza; width: 112; height: 72}
+    c3: "tope\nsemanal" {class: sangre; width: 112; height: 72}
+    c4: "bloqueado" {class: tumba; width: 112; height: 72}
+    c5: "bloqueado" {class: tumba; width: 112; height: 72}
+    c6: "bloqueado" {class: tumba; width: 112; height: 72}
+    c7: "bloqueado" {class: tumba; width: 112; height: 72}
+  }
+
+  semanal: {
+    class: invisible
+    label: ""
+    grid-columns: 8
+    grid-gap: 8
+    c0: "Tope semanal\n(acumulado)" {class: etiqueta; label.near: center-left; width: 200; height: 72}
+    c1: "20 %" {class: niebla; width: 112; height: 72}
+    c2: "60 %" {class: calabaza; width: 112; height: 72}
+    c3: "100 %" {class: sangre; width: 112; height: 72}
+    c4: "hasta el\nlunes" {class: tumba; width: 112; height: 72}
+    c5: "hasta el\nlunes" {class: tumba; width: 112; height: 72}
+    c6: "hasta el\nlunes" {class: tumba; width: 112; height: 72}
+    c7: "hasta el\nlunes" {class: tumba; width: 112; height: 72}
+  }
+}
+
+leyenda: |md
+  Ejemplo ilustrativo. **Cada petición descuenta de los dos relojes a la vez.**
+
+  La ventana de 5 horas se reinicia sola. El tope semanal no vuelve hasta su fecha, cambies o no de modelo.
+| {class: nota; near: bottom-center}

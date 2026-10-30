@@ -1,0 +1,77 @@
+...@estilo
+
+titulo: Cada llamada vuelve a leer todo el contexto {class: titulo}
+
+escalera: {
+  class: invisible
+  label: ""
+  grid-rows: 6
+  grid-gap: 12
+
+  l1: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 4
+    n: "Llamada 1" {class: etiqueta; width: 150; height: 64}
+    base: "Base: system prompt, herramientas,\nCLAUDE.md, listado de skills" {class: calabaza; width: 330; height: 64}
+    msg: "Tu\nmensaje" {class: calabaza; width: 100; height: 64}
+  }
+  l2: {
+    class: invisible
+    label: ""
+    grid-columns: 4
+    grid-gap: 4
+    n: "Llamada 2" {class: etiqueta; width: 150; height: 64}
+    base: "Base" {class: niebla; width: 330; height: 64}
+    msg: "Mensaje" {class: niebla; width: 100; height: 64}
+    leer: "Lee 4\nficheros" {class: calabaza; width: 140; height: 64}
+  }
+  l3: {
+    class: invisible
+    label: ""
+    grid-columns: 5
+    grid-gap: 4
+    n: "Llamada 3" {class: etiqueta; width: 150; height: 64}
+    base: "Base" {class: niebla; width: 330; height: 64}
+    msg: "Mensaje" {class: niebla; width: 100; height: 64}
+    leer: "4 ficheros" {class: niebla; width: 140; height: 64}
+    log: "Log de tests:\n3.000 líneas" {class: calabaza; width: 250; height: 64}
+  }
+  l4: {
+    class: invisible
+    label: ""
+    grid-columns: 6
+    grid-gap: 4
+    n: "Llamada 4" {class: etiqueta; width: 150; height: 64}
+    base: "Base" {class: niebla; width: 330; height: 64}
+    msg: "Mensaje" {class: niebla; width: 100; height: 64}
+    leer: "4 ficheros" {class: niebla; width: 140; height: 64}
+    log: "Log de tests" {class: niebla; width: 250; height: 64}
+    fix: "Edita" {class: calabaza; width: 80; height: 64}
+  }
+  puntos: {
+    class: invisible
+    label: ""
+    grid-columns: 2
+    grid-gap: 4
+    n: "· · ·" {class: etiqueta; width: 150; height: 30}
+    resto: "cada herramienta usada es otra llamada" {class: nota; width: 330; height: 30}
+  }
+  l200: {
+    class: invisible
+    label: ""
+    grid-columns: 4
+    grid-gap: 4
+    n: "Llamada 200" {class: etiqueta; width: 150; height: 64}
+    base: "Base" {class: niebla; width: 330; height: 64}
+    todo: "Todo lo anterior, otra vez\n(el log de la llamada 3 incluido)" {class: niebla; width: 578; height: 64}
+    nuevo: "Nuevo" {class: calabaza; width: 80; height: 64}
+  }
+}
+
+leyenda: |md
+  **Naranja**: lo nuevo de esa llamada. **Gris**: lo que se relee de la caché, más barato pero nunca gratis.
+
+  **Gasto del hilo principal ≈ número de llamadas × contexto por llamada**
+| {class: nota; near: bottom-center}

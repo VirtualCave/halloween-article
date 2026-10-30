@@ -1,0 +1,74 @@
+...@estilo
+
+titulo: La casa encantada de una skill {class: titulo}
+
+casa: {
+  class: invisible
+  label: ""
+  grid-rows: 6
+  grid-gap: 14
+
+  cabecera: {
+    class: invisible
+    label: ""
+    grid-columns: 3
+    grid-gap: 10
+    a: "Qué hay" {class: etiqueta; width: 350; height: 36}
+    b: "Cuándo cuesta" {class: etiqueta; width: 370; height: 36}
+    c: "Quién vive ahí" {class: etiqueta; width: 310; height: 36}
+  }
+
+  atico: "ÁTICO · Listado" {
+    class: grupo
+    label.near: top-left
+    grid-columns: 3
+    grid-gap: 10
+    que: "description y when_to_use\nde la skill, y la de cada agente" {class: caja; width: 350; height: 80}
+    cuando: "En todas las sesiones,\nla uses o no" {class: caja; width: 370; height: 80}
+    bicho: "El fantasma\ndel listado" {class: sangre; width: 310; height: 80}
+  }
+
+  planta: "PLANTA BAJA · Disparo" {
+    class: grupo
+    label.near: top-left
+    grid-columns: 3
+    grid-gap: 10
+    que: "El cuerpo de SKILL.md" {class: caja; width: 350; height: 80}
+    cuando: "Desde que se invoca hasta el final:\ncada llamada posterior lo relee" {class: caja; width: 370; height: 80}
+    bicho: "El zombi\ndel SKILL.md" {class: sangre; width: 310; height: 80}
+  }
+
+  sotano: "SÓTANO · Bajo demanda" {
+    class: grupo
+    label.near: top-left
+    grid-columns: 3
+    grid-gap: 10
+    que: "references/, plantillas\ny el código de los scripts" {class: caja; width: 350; height: 80}
+    cuando: "Cuando el modelo los abre\n(y se quedan en el contexto)" {class: caja; width: 370; height: 80}
+    bicho: "La momia\nde las referencias" {class: sangre; width: 310; height: 80}
+  }
+
+  cripta: "CRIPTA · Trabajo" {
+    class: grupo
+    label.near: top-left
+    grid-columns: 3
+    grid-gap: 10
+    que: "Resultados de herramientas, logs,\nficheros leídos, reintentos" {class: caja; width: 350; height: 80}
+    cuando: "Cada resultado viaja en todas\nlas llamadas siguientes" {class: calabaza; width: 370; height: 80}
+    bicho: "El vampiro del log y\nla bandada de murciélagos" {class: sangre; width: 310; height: 80}
+  }
+
+  anexo: "ANEXO · Subagentes" {
+    class: grupo
+    label.near: top-left
+    grid-columns: 3
+    grid-gap: 10
+    que: "Su system prompt, herramientas,\nCLAUDE.md, el prompt y su trabajo" {class: caja; width: 350; height: 80}
+    cuando: "En cada subagente; al hilo principal\nsolo vuelve su respuesta" {class: caja; width: 370; height: 80}
+    bicho: "La araña\nde los subagentes" {class: sangre; width: 310; height: 80}
+  }
+}
+
+leyenda: |md
+  Las plantas de arriba se miden leyendo la skill. **La cripta solo se ve en las sesiones reales, y suele ser la que más pesa.**
+| {class: nota; near: bottom-center}

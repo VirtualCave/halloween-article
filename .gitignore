@@ -1,0 +1,12 @@
+# Logs of a failed diagram render
+images/.*.log
+.idea/
+
+# Python caches of the skill's scripts
+__pycache__/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
